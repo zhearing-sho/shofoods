@@ -350,11 +350,16 @@ footer button:hover {
 </section>
 
 <footer id="contact">
-    © 2025 ShoFood Supply, LLC<br><br>
+    © <span id="year"></span> ShoFood Supply, LLC<br><br>
     <button onclick="openModal('privacy')">Privacy Policy</button> |
     <button onclick="openModal('terms')">Terms of Use</button> |
     <button onclick="openModal('disclosure')">Administrative Fee Disclosure</button>
 </footer>
+
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
 
 <!-- Modal -->
 <div class="modal" id="modal">
