@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ShoFood™ Supply | Smart Hospitality</title>
+
+<style>
+:root {
+    --primary: #ff6b6b;
+    --dark: #1a252f;
+    --bg: #f5f7fa;
+    --card: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    background: var(--bg);
+    color: #2c3e50;
+    line-height: 1.7;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    padding: 28px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 28px;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+nav a:hover {
+    opacity: 1;
+}
+
+/* Hero */
+.hero {
+    padding: 140px 20px 120px;
+    text-align: center;
+    background: linear-gradient(to right, #1a2a3a, #243b55);
+    color: white;
+}
+
+.hero h1 {
+    font-size: clamp(2.6rem, 4vw, 3.2rem);
+    margin-bottom: 18px;
+    letter-spacing: 0.5px;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    max-width: 900px;
+    margin: 0 auto 18px;
+}
+
+/* Sections */
+section {
+    max-width: 1200px;
+    margin: 90px auto;
+    padding: 0 20px;
+}
+
+section h2 {
+    font-size: 2.1rem;
+    margin-bottom: 35px;
+    border-left: 5px solid var(--primary);
+    padding-left: 18px;
+    letter-spacing: 0.3px;
+}
+
+/* Cards */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+}
+
+.card {
+    background: var(--card);
+    padding: 34px;
+    border-radius: 16px;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 26px 50px rgba(0,0,0,0.16);
+}
+
+.card h3 {
+    margin-top: 0;
+    margin-bottom: 14px;
+    font-size: 1.35rem;
+}
+
+.card ul,
+.card ol {
+    padding-left: 20px;
+}
+
+.card li {
+    margin-bottom: 8px;
+}
+
+/* Footer */
+footer {
+    background: var(--dark);
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+    margin-top: 120px;
+}
+
+footer button {
+    background: none;
+    border: none;
+    color: var(--primary);
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 0 10px;
+    font-weight: 500;
+}
+
+footer button:hover {
+    text-decoration: underline;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.7);
+    z-index: 1000;
+    backdrop-filter: blur(4px);
+}
+
+.modal-content {
+    background: white;
+    max-width: 1000px;
+    margin: 4% auto;
+    padding: 50px;
+    border-radius: 16px;
+    max-height: 85vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    font-size: 2rem;
+}
+
+.modal-content h3 {
+    margin-top: 36px;
+}
+
+.modal-content p,
+.modal-content li {
+    font-size: 1.05rem;
+}
+
+.modal-close {
+    position: absolute;
+    top: 22px;
+    right: 28px;
+    font-size: 1.6rem;
+    cursor: pointer;
+    color: #666;
+}
+
+.modal-close:hover {
+    color: #000;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <strong>SHOFOOD™</strong>
+    <nav>
+        <a href="#services">Services</a>
+        <a href="#vendors">Vendor Partners</a>
+        <a href="#clients">Restaurant Systems</a>
+    </nav>
+</header>
+
+<div class="hero" id="home">
+    <h1>SHOFOOD™</h1>
+    <p><strong>Smart Hospitality. Optimized Food. Outstanding Dependability.</strong><br>
+    Strengthening Restaurant Systems Through Smarter Purchasing</p>
+    <p>
+        ShoFood Supply, LLC delivers value-focused procurement, contracting, and cooperative purchasing
+        solutions for restaurant systems nationwide. We negotiate with leading foodservice manufacturers,
+        suppliers, and distributors to secure quality products, competitive pricing, and systemwide
+        supply-chain efficiency.
+    </p>
+</div>
+
+<section>
+    <h2>Who We Serve</h2>
+    <div class="card-grid">
+        <div class="card">
+            <p>
+                We support franchised and company-owned Shoney’s®, 7PIE®, and other restaurant system
+                clients with purchasing programs that reduce costs, streamline operations, and ensure
+                consistent product availability.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="services">
+    <h2>What We Do</h2>
+    <div class="card-grid">
+        <div class="card">
+            <h3>Procurement & Negotiation</h3>
+            <p>We secure competitive pricing and dependable supply arrangements with approved vendors.</p>
+        </div>
+        <div class="card">
+            <h3>Cooperative Purchasing</h3>
+            <p>We leverage systemwide purchasing power to deliver value to restaurant brands and their franchisees.</p>
+        </div>
+        <div class="card">
+            <h3>Contract Management</h3>
+            <p>
+                We manage vendor agreements, pricing structures, and product specifications to help
+                operators stay focused on running their restaurants.
+            </p>
+        </div>
+        <div class="card">
+            <h3>Systemwide Support</h3>
+            <p>
+                Our programs are designed to benefit both franchised and company-owned locations through
+                efficient, transparent, and reliable supply-chain services.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>How We’re Compensated</h2>
+    <div class="card-grid">
+        <div class="card">
+            <p>
+                ShoFood receives an Administrative Fee from vendors based on purchased products or services.
+                This fee is collected by vendors—not franchisees—and supports the procurement and contracting
+                services we provide to restaurant systems.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Our Commitment</h2>
+    <div class="card-grid">
+        <div class="card">
+            <ul>
+                <li>✔ Integrity</li>
+                <li>✔ Transparency</li>
+                <li>✔ Reliable Partnerships</li>
+                <li>✔ Performance & Value</li>
+                <li>✔ Systemwide Support</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="vendors">
+    <h2>Vendor Onboarding</h2>
+    <div class="card-grid">
+        <div class="card">
+            <p>
+                ShoFood partners with foodservice manufacturers, distributors, and service providers to
+                deliver value to the restaurant systems we support. We welcome vendor partners who share
+                our commitment to quality, consistency, and service excellence.
+            </p>
+        </div>
+        <div class="card">
+            <h3>Vendor Requirements</h3>
+            <ul>
+                <li>Product quality and consistency</li>
+                <li>Food safety and regulatory compliance</li>
+                <li>Reliable logistics and delivery performance</li>
+                <li>Competitive, sustainable pricing</li>
+                <li>Transparency in program participation and reporting</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Onboarding Process</h3>
+            <ol>
+                <li>Initial Inquiry</li>
+                <li>Program Review</li>
+                <li>Documentation & Compliance</li>
+                <li>Agreement & Program Launch</li>
+            </ol>
+        </div>
+        <div class="card">
+            <p><strong>Email:</strong> partners@shofood.com</p>
+        </div>
+    </div>
+</section>
+
+<section id="clients">
+    <h2>Partnering With ShoFood Supply</h2>
+    <div class="card-grid">
+        <div class="card">
+            <p>
+                ShoFood Supply, LLC supports restaurant groups of all sizes with procurement, contracting,
+                and cooperative purchasing services designed to strengthen supply chains, reduce costs,
+                and ensure product consistency across every location.
+            </p>
+        </div>
+        <div class="card">
+            <h3>What We Need From New Clients</h3>
+            <ul>
+                <li>Product and ingredient lists</li>
+                <li>Current supplier and distributor information</li>
+                <li>Invoices or pricing files</li>
+                <li>Menu requirements or product specifications</li>
+                <li>Location list with delivery details</li>
+                <li>Any existing purchasing contracts</li>
+            </ul>
+            <p>(All information is kept confidential and used solely for procurement analysis.)</p>
+        </div>
+        <div class="card">
+            <p><strong>General Inquiries:</strong> info@shofood.com</p>
+            <p><strong>Restaurant System Onboarding:</strong> onboarding@shofood.com</p>
+        </div>
+    </div>
+</section>
+
+<footer id="contact">
+    © 2025 ShoFood Supply, LLC<br><br>
+    <button onclick="openModal('privacy')">Privacy Policy</button> |
+    <button onclick="openModal('terms')">Terms of Use</button> |
+    <button onclick="openModal('disclosure')">Administrative Fee Disclosure</button>
+</footer>
+
+<!-- Modal -->
+<div class="modal" id="modal">
+    <div class="modal-content">
+        <span class="modal-close" onclick="closeModal()">✕</span>
+        <div id="modalBody"></div>
+    </div>
+</div>
+
+<script>
+const modalContent = {
+privacy: `
+<h2>Privacy Policy</h2>
+<p><strong>Effective Date:</strong> November 17, 2025</p>
+<p>
+ShoFood Supply, LLC (“ShoFood,” “we,” “our,” or “us”) is committed to protecting your privacy.
+This Privacy Policy explains how we collect, use, and safeguard information when you visit our
+website or contact us for services.
+</p>
+
+<h3>Information We Collect</h3>
+<p><strong>Information You Provide</strong></p>
+<ul>
+<li>Contact information (name, email, phone)</li>
+<li>Business information submitted by vendors or restaurant systems</li>
+<li>Information submitted via forms, emails, or phone calls</li>
+</ul>
+
+<p><strong>Automatically Collected Information</strong></p>
+<ul>
+<li>IP address</li>
+<li>Browser type</li>
+<li>Pages visited</li>
+<li>Basic analytics to improve user experience</li>
+</ul>
+
+<p>We do not sell or share personal information for marketing purposes.</p>
+
+<h3>How We Use Information</h3>
+<ul>
+<li>Respond to inquiries</li>
+<li>Evaluate vendor participation</li>
+<li>Provide procurement and purchasing services</li>
+<li>Improve our website and communications</li>
+<li>Maintain business records and comply with legal obligations</li>
+</ul>
+
+<h3>Information Sharing</h3>
+<ul>
+<li>Approved vendors, suppliers, or distributors participating in ShoFood programs</li>
+<li>Service providers assisting with business operations</li>
+<li>Legal authorities if required by law</li>
+</ul>
+
+<p>We do not sell user data.</p>
+
+<h3>Data Security</h3>
+<p>
+ShoFood implements reasonable administrative and technical safeguards to protect information.
+However, no method of transmission is completely secure.
+</p>
+
+<h3>Links to Other Websites</h3>
+<p>
+Our website may contain links to third-party sites. We are not responsible for their privacy practices.
+</p>
+
+<h3>Your Choices</h3>
+<p>
+You may contact us to correct, update, or request deletion of your information, subject to applicable
+record-keeping requirements.
+</p>
+
+<p><strong>Contact:</strong> privacy@shofood.com</p>
+`,
+
+terms: `
+<h2>Terms of Use</h2>
+<p><strong>Effective Date:</strong> November 17, 2025</p>
+
+<h3>1. Use of the Site</h3>
+<p>
+You may use the Site for lawful purposes only. You may not attempt to disrupt, damage, or modify
+the Site or its content.
+</p>
+
+<h3>2. Intellectual Property</h3>
+<p>
+All content, trademarks, text, graphics, and materials on the Site are owned or licensed by ShoFood
+and may not be copied or used without written permission.
+</p>
+
+<h3>3. No Franchise or Legal Advice</h3>
+<p>
+Content on this Site is for informational purposes only. ShoFood does not control franchisee
+operations, employment decisions, or purchasing choices.
+</p>
+
+<h3>4. Accuracy of Information</h3>
+<p>
+We strive to keep information accurate but make no warranties regarding completeness or reliability.
+</p>
+
+<h3>5. Limitation of Liability</h3>
+<p>
+ShoFood is not liable for any damages arising from use of the Site or reliance on its content.
+</p>
+
+<h3>6. Links to Third-Party Sites</h3>
+<p>
+ShoFood is not responsible for the content or practices of third-party websites linked from our Site.
+</p>
+
+<h3>7. Modification of Terms</h3>
+<p>
+ShoFood may update these Terms at any time. Continued use of the Site constitutes acceptance of
+revised terms.
+</p>
+
+<h3>8. Contact</h3>
+<p><strong>Email:</strong> legal@shofood.com</p>
+`,
+
+disclosure: `
+<h2>Administrative Fee Disclosure</h2>
+<p>
+ShoFood Supply, LLC receives an Administrative Fee from vendors based on purchased products or
+services. This fee is collected by vendors and is not charged to franchisees.
+</p>
+<p>
+Administrative Fees support ShoFood’s procurement, contracting, cooperative purchasing, and
+systemwide supply-chain services provided to restaurant systems.
+</p>
+`
+};
+
+function openModal(type) {
+    document.getElementById('modalBody').innerHTML = modalContent[type];
+    document.getElementById('modal').style.display = 'block';
+}
+
+function closeModal() {
+    document.getElementById('modal').style.display = 'none';
+}
+</script>
+
+</body>
+</html>
