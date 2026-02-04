@@ -190,6 +190,38 @@ footer button:hover {
 .modal-close:hover {
     color: #000;
 }
+
+/* Leadership Section */
+.leadership-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 50px;
+    justify-items: center;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.leader img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.15);
+    margin-bottom: 18px;
+}
+
+.leader h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.leader p {
+    margin-top: 6px;
+    font-size: 0.95rem;
+    color: #555;
+}
+
 </style>
 </head>
 
@@ -285,6 +317,25 @@ footer button:hover {
     </div>
 </section>
 
+<section>
+    <h2>Leadership</h2>
+
+    <div class="leadership-grid">
+         <div class="leader">
+            <img src="https://www.shoneys.com/wp-content/uploads/2019/02/Kamran-Habeeb.png" alt="Kamran Habeeb">
+            <h3>Kamran Habeeb</h3>
+            <p>President</p>
+        </div>
+
+        <div class="leader">
+            <img src="https://media.istockphoto.com/id/2149116891/vector/male-face-silhouette-or-icon-isolated-on-white-background-man-avatar-profile-vector-design.jpg?s=612x612&w=0&k=20&c=X8r6lH5P-26_X9PpH6jjiTw5bvZ3UY_O-bRA1PYNgUg=" alt="Scott Young">
+            <h3>Scott Young</h3>
+            <p>Director of Purchasing &amp; Supply Chain</p>
+        </div>
+    </div>
+</section>
+
+
 <section id="vendors">
     <h2>Vendor Onboarding</h2>
     <div class="card-grid">
@@ -354,11 +405,6 @@ footer button:hover {
         <strong>ShoFood Supply, LLC</strong><br>
         1717 Elm Hill Pike, Suite B1<br>
         Nashville, TN 37210
-    </p>
-
-    <p style="margin-bottom: 18px;">
-        <strong>Director of Purchasing / Supply Chain:</strong> Scott Young<br>
-        <strong>President:</strong> Kamran Habeeb
     </p>
 
     © <span id="year"></span> ShoFood Supply, LLC<br><br>
