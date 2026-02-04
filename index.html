@@ -350,11 +350,24 @@ footer button:hover {
 </section>
 
 <footer id="contact">
+    <p style="margin-bottom: 12px;">
+        <strong>ShoFood Supply, LLC</strong><br>
+        1717 Elm Hill Pike, Suite B1<br>
+        Nashville, TN 37210
+    </p>
+
+    <p style="margin-bottom: 18px;">
+        <strong>Director of Purchasing / Supply Chain:</strong> Scott Young<br>
+        <strong>President:</strong> Kamran Habeeb
+    </p>
+
     © <span id="year"></span> ShoFood Supply, LLC<br><br>
+
     <button onclick="openModal('privacy')">Privacy Policy</button> |
     <button onclick="openModal('terms')">Terms of Use</button> |
     <button onclick="openModal('disclosure')">Administrative Fee Disclosure</button>
 </footer>
+
 
 <script>
     document.getElementById('year').textContent = new Date().getFullYear();
