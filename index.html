@@ -239,17 +239,31 @@ footer button:hover {
     opacity: 0.95;
 }
 
-/* Mobile adjustment */
+/* Mobile Header – clean scaling, no wrapping */
 @media (max-width: 768px) {
-    .client-logos {
-        grid-template-columns: 1fr;
-        gap: 28px;
+    header {
+        padding: 14px 16px;
+        gap: 12px;
     }
 
-    .client-logos img {
-        max-width: 200px;
+    header strong {
+        font-size: clamp(1rem, 4vw, 1.2rem);
+        white-space: nowrap;
+    }
+
+    nav {
+        display: flex;
+        gap: 14px;
+        flex-wrap: nowrap;
+    }
+
+    nav a {
+        font-size: clamp(0.8rem, 3.2vw, 0.95rem);
+        margin: 0;
+        white-space: nowrap;
     }
 }
+
 
 
 </style>
