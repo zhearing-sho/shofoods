@@ -222,6 +222,36 @@ footer button:hover {
     color: #555;
 }
 
+/* Client Logos */
+.client-logos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    align-items: center;
+    justify-items: center;
+}
+
+.client-logos img {
+    max-width: 240px;
+    width: 100%;
+    max-height: 120px;
+    object-fit: contain;
+    opacity: 0.95;
+}
+
+/* Mobile adjustment */
+@media (max-width: 768px) {
+    .client-logos {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .client-logos img {
+        max-width: 200px;
+    }
+}
+
+
 </style>
 </head>
 
@@ -250,16 +280,19 @@ footer button:hover {
 
 <section>
     <h2>Who We Serve</h2>
-    <div class="card-grid">
-        <div class="card">
-            <p>
-                We support franchised and company-owned Shoney’s®, 7PIE®, and other restaurant system
-                clients with purchasing programs that reduce costs, streamline operations, and ensure
-                consistent product availability.
-            </p>
-        </div>
+
+    <p style="max-width: 900px; margin-bottom: 50px;">
+        We support franchised and company-owned restaurant systems with purchasing programs that reduce
+        costs, streamline operations, and ensure consistent product availability.
+    </p>
+
+    <div class="client-logos">
+        <img src="https://www.scrapehero.com/store/wp-content/uploads/2022/03/Shoneys_USA-324x324.png" alt="Shoney's">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQN2ZJXA7InGLn0O-Han_SbiTWBAh7Duw8iyQ&s" alt="7Pie">
+        <img src="https://static.wixstatic.com/media/0d1437_234de363412249bfa86a7269fe081242~mv2.png/v1/fill/w_174,h_174,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Circle%20Logo%20Revision%20Black_edited.png" alt="Montaluce Winery & Restaurant">
     </div>
 </section>
+
 
 <section id="services">
     <h2>What We Do</h2>
@@ -328,7 +361,7 @@ footer button:hover {
         </div>
 
         <div class="leader">
-            <img src="https://media.istockphoto.com/id/2149116891/vector/male-face-silhouette-or-icon-isolated-on-white-background-man-avatar-profile-vector-design.jpg?s=612x612&w=0&k=20&c=X8r6lH5P-26_X9PpH6jjiTw5bvZ3UY_O-bRA1PYNgUg=" alt="Scott Young">
+            <img src="https://raw.githubusercontent.com/zhearing-sho/shofoods/refs/heads/main/scottHead.jpeg?token=GHSAT0AAAAAADUIVOUYJZZHUIE5VQFIOFIQ2MD6K3A" alt="Scott Young">
             <h3>Scott Young</h3>
             <p>Director of Purchasing &amp; Supply Chain</p>
         </div>
